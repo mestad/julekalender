@@ -1,5 +1,22 @@
+<html>
+<body>
 <h1>D&oslash;r</h1>
 <p>Du st&aring;r foran en d&oslash;r.</p>
-<li><a href="e.htm">Vil du &aring;pne den?</a></li>
+<!-- <li><a href="e.htm">Vil du &aring;pne den?</a></li> -->
 <li><a href="a.htm">Vil du g&aring; tilbake?</a></li>
+<form name="myForm" action="f.htm" onsubmit="return validateForm()" method="post">
+Skriv riktig passord for &aring; &aring;pne d&oslash;ra: <input type="text" name="passord">
+<input type="submit" value="Submit">
+</form>
 
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["passord"].value;
+    if (x == null || x != "kodeklubb") {
+        alert("Feil passord!");
+        return false;
+    }
+}
+</script
+</body>
+</html>
